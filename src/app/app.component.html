@@ -1,0 +1,14 @@
+<nav>
+    <a routerLink="" routerLinkActive="active" hidden>Checklist </a>
+    <a routerLink="/signin" routerLinkActive="active" hidden>Signin </a>
+    <a routerLink="/registration" routerLinkActive="active" hidden>Registration</a>
+    <div class="sign-out">
+        <a routerLink="/signin" routerLinkActive="active" (click)="signOut()"> Sign-out </a>
+    </div>
+</nav>
+
+<!-- <main [@fadeInAnimation]="router.url"> -->
+<div [@fadeInAnimation]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
+</div>
+<!-- </main> -->

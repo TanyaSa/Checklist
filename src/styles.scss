@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'assets/scss/palette';
+@import 'assets/scss/snackbar.scss';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: linear-gradient(18deg, $awesome-red 43%, $awesome-blue 43%);
+    height: auto;
+    overflow: hidden;
+}

@@ -1,0 +1,39 @@
+<form class="example-form" [formGroup]="registrationForm">
+  <h2>Registration</h2>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput formControlName="emailFormControl" placeholder="Ex. pat@example.com" name="email" />
+    <mat-error *appErrorDirective="'emailFormControl'">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Full name</mat-label>
+    <input matInput formControlName="usernameFormControl" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input type="password" matInput formControlName="passwordFormControl" placeholder="Ex. VeryHardPassword!1" />
+    <mat-error *appErrorDirective="'passwordFormControl'">
+      Password is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Password confirmation</mat-label>
+    <input type="password" matInput formControlName="passwordConfirmFormControl" placeholder="Ex. VeryHardPassword!1" />
+
+    <mat-error *appErrorDirective="'passwordConfirmFormControl'">
+      Passwords should <strong>match</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <div class="buttons">
+    <button type="button" mat-raised-button color="primary" class="signin-button" (click)="registration()">Register</button>
+    <button type="button" mat-stroked-button color="primary" class="registaration-button" (click)="signinRedirect()">Cancel</button>
+  </div>
+
+</form>
